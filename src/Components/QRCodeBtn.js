@@ -1,4 +1,4 @@
-import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Image, TouchableWithoutFeedback, StyleSheet} from 'react-native';
 import React from 'react';
 import {heightScale, widthScale, screenWidth, screenHeight} from '../utils';
 import {Fonts, MyTheme} from '../Constants';
@@ -7,11 +7,11 @@ const {colors} = MyTheme;
 
 const QRCodeBtn = ({onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.btnContainer}>
+    <TouchableWithoutFeedback onPress={onPress} style={styles.btnContainer}>
       <View
         style={{
           ...generalStyle.itemCenter,
-          backgroundColor: colors.background,
+          backgroundColor: colors.white,
         }}>
         <Image
           source={require('../assets/Icons/qrscanner.png')}
@@ -19,7 +19,7 @@ const QRCodeBtn = ({onPress}) => {
           style={styles.img}
         />
       </View>
-    </TouchableOpacity>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -29,10 +29,11 @@ const styles = StyleSheet.create({
   btnContainer: {
     top: -10,
     elevation: 5,
+    backgroundColor: 'transparent'
   },
   img: {
-    height: heightScale(60),
-    width: heightScale(60),
+    height: heightScale(65),
+    width: heightScale(65),
     marginBottom: heightScale(32),
   },
 });

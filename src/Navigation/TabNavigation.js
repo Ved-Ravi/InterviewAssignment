@@ -56,7 +56,7 @@ function Tabs() {
             <View
               style={{
                 ...styles.fullSize,
-                backgroundColor: colors.background,
+                backgroundColor: colors.white,
               }}>
               <View
                 style={{
@@ -94,7 +94,7 @@ function Tabs() {
             <View
               style={{
                 ...styles.fullSize,
-                backgroundColor: colors.background,
+                backgroundColor: colors.white,
               }}>
               <View
                 style={{

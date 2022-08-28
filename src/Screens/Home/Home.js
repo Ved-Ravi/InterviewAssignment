@@ -13,7 +13,7 @@ import React, {useState} from 'react';
 import generalStyle from '../../Styles/GeneralStyle';
 import styles from './styles';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
-import {screenWidth, widthScale} from '../../utils';
+import {heightScale, screenWidth, widthScale} from '../../utils';
 import {useTheme} from '@react-navigation/native';
 import CreditCard from '../../Components/CreditCard';
 import MenuCard from '../../Components/MenuCard';
@@ -71,6 +71,7 @@ const Home = () => {
               onSnapToItem={index => setActiveSlide(index)}
             />
             <Pagination
+              containerStyle={{paddingVertical: 10, marginBottom: heightScale(5)}}
               dotsLength={3}
               activeDotIndex={activeSlide}
               dotColor={colors.primary}
