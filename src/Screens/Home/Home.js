@@ -2,6 +2,7 @@ import {
   SafeAreaView,
   ImageBackground,
   StatusBar,
+  ScrollView,
   View,
   Text,
   Image,
@@ -46,60 +47,69 @@ const Home = () => {
         resizeMode="contain"
         style={styles.imageview}
         imageStyle={styles.image}>
-        <View style={styles.headingView}>
-          <View style={styles.headTxtview}>
-            <Text style={styles.greet}>Welcome back</Text>
-            <Text style={styles.nameTxt}>Ved Ravi</Text>
+        <ScrollView>
+          <View style={styles.headingView}>
+            <View style={styles.headTxtview}>
+              <Text style={styles.greet}>Welcome back</Text>
+              <Text style={styles.nameTxt}>Ved Ravi</Text>
+            </View>
+            <TouchableOpacity onPress={openModal}>
+              <Image
+                source={require('../../assets/Icons/notification.png')}
+                style={styles.notfIcon}
+                resizeMode="contain"
+              />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={openModal}>
-            <Image
-              source={require('../../assets/Icons/notification.png')}
-              style={styles.notfIcon}
-              resizeMode="contain"
+          <View>
+            <Carousel
+              layout={'default'}
+              data={entries}
+              renderItem={renderItem}
+              sliderWidth={screenWidth}
+              itemWidth={screenWidth}
+              onSnapToItem={index => setActiveSlide(index)}
             />
-          </TouchableOpacity>
-        </View>
-        <View>
-          <Carousel
-            layout={'default'}
-            data={entries}
-            renderItem={renderItem}
-            sliderWidth={screenWidth}
-            itemWidth={screenWidth}
-            onSnapToItem={index => setActiveSlide(index)}
-          />
-          <Pagination
-            dotsLength={3}
-            activeDotIndex={activeSlide}
-            dotColor={colors.primary}
-            inactiveDotColor={colors.border}
-            dotStyle={{
-              width: 10,
-              height: 10,
-              borderRadius: 5,
-              marginHorizontal: widthScale(5),
-              backgroundColor: colors.primary,
-            }}
-            inactiveDotStyle={{
-              width: 10,
-              height: 10,
-              borderRadius: 5,
-              marginHorizontal: 0,
-              backgroundColor: colors.border,
-            }}
-            // inactiveDotOpacity={0.4}
-            inactiveDotScale={0.8}
-          />
-        </View>
+            <Pagination
+              dotsLength={3}
+              activeDotIndex={activeSlide}
+              dotColor={colors.primary}
+              inactiveDotColor={colors.border}
+              dotStyle={{
+                width: 10,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: widthScale(5),
+                backgroundColor: colors.primary,
+              }}
+              inactiveDotStyle={{
+                width: 10,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: 0,
+                backgroundColor: colors.border,
+              }}
+              inactiveDotScale={0.8}
+            />
+          </View>
 
-        <View style={styles.menuview}>
-          <FlatList
-            data={menu}
-            renderItem={renderMenuItem}
-            keyExtractor={item => item.name}
-            numColumns={4}
-          />
-        </View>
+          <View style={styles.menuview}>
+            <FlatList
+              data={menu}
+              renderItem={renderMenuItem}
+              keyExtractor={item => item.name}
+              numColumns={4}
+            />
+          </View>
+
+          <View style={styles.graphcard}>
+            <Text style={styles.grhead}>
+              Cash
+              <Text style={{color: '#2AC670'}}> in </Text> Cash
+              <Text style={{color: '#F3A614'}}> Out </Text>
+            </Text>
+          </View>
+        </ScrollView>
       </ImageBackground>
       <ModalView
         isModalOpen={isModalOpen}

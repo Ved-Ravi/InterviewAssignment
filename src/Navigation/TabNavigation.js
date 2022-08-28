@@ -4,9 +4,16 @@ import Home from '../Screens/Home';
 import Message from '../Screens/Messages';
 import CardsScreen from '../Screens/CardsScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
+import QRCodeScreen from '../Screens/QRCodeScreen';
 import {MyTheme} from '../Constants';
-import {View, Image, StyleSheet} from 'react-native';
-import {heightScale} from '../utils';
+import {
+  View,
+  Image,
+  StyleSheet,
+} from 'react-native';
+import {heightScale, widthScale} from '../utils';
+import generalStyle from '../Styles/GeneralStyle';
+import QRCodeBtn from '../Components/QRCodeBtn';
 const {colors} = MyTheme;
 
 const Tab = createBottomTabNavigator();
@@ -15,9 +22,12 @@ function Tabs() {
   return (
     <Tab.Navigator
       screenOptions={{
+        tabBarShowLabel: false,
         headerShown: false,
         tabBarStyle: {
           backgroundColor: colors.primary,
+          height: heightScale(64),
+          borderTopWidth: 0,
         },
       }}>
       <Tab.Screen
@@ -30,8 +40,7 @@ function Tabs() {
                 source={require('../assets/Icons/home.png')}
                 resizeMode="contain"
                 style={{
-                  height: heightScale(24),
-                  width: heightScale(24),
+                  ...styles.imgSize,
                   tintColor: focused ? colors.border : colors.white,
                 }}
               />
@@ -44,18 +53,37 @@ function Tabs() {
         component={CardsScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={styles.iconview}>
-              <Image
-                source={require('../assets/Icons/card.png')}
-                resizeMode="contain"
+            <View
+              style={{
+                ...styles.fullSize,
+                backgroundColor: colors.background,
+              }}>
+              <View
                 style={{
-                  height: heightScale(24),
-                  width: heightScale(24),
-                  tintColor: focused ? colors.border : colors.white,
-                }}
-              />
+                  ...generalStyle.itemCenter,
+                  ...styles.fullSize,
+                  borderTopRightRadius: 50,
+                  backgroundColor: colors.primary,
+                }}>
+                <Image
+                  source={require('../assets/Icons/card.png')}
+                  resizeMode="contain"
+                  style={{
+                    ...styles.imgSize,
+                    marginRight: widthScale(40),
+                    tintColor: focused ? colors.border : colors.white,
+                  }}
+                />
+              </View>
             </View>
           ),
+        }}
+      />
+      <Tab.Screen
+        name="QRScanner"
+        component={QRCodeScreen}
+        options={{
+          tabBarButton: props => <QRCodeBtn {...props} />,
         }}
       />
       <Tab.Screen
@@ -63,16 +91,28 @@ function Tabs() {
         component={Message}
         options={{
           tabBarIcon: ({focused}) => (
-            <View style={styles.iconview}>
-              <Image
-                source={require('../assets/Icons/message.png')}
-                resizeMode="contain"
+            <View
+              style={{
+                ...styles.fullSize,
+                backgroundColor: colors.background,
+              }}>
+              <View
                 style={{
-                  height: heightScale(24),
-                  width: heightScale(24),
-                  tintColor: focused ? colors.border : colors.white,
-                }}
-              />
+                  ...generalStyle.itemCenter,
+                  ...styles.fullSize,
+                  borderTopLeftRadius: 50,
+                  backgroundColor: colors.primary,
+                }}>
+                <Image
+                  source={require('../assets/Icons/message.png')}
+                  resizeMode="contain"
+                  style={{
+                    ...styles.imgSize,
+                    marginLeft: widthScale(40),
+                    tintColor: focused ? colors.border : colors.white,
+                  }}
+                />
+              </View>
             </View>
           ),
         }}
@@ -87,8 +127,7 @@ function Tabs() {
                 source={require('../assets/Icons/profileuser.png')}
                 resizeMode="contain"
                 style={{
-                  height: heightScale(24),
-                  width: heightScale(24),
+                  ...styles.imgSize,
                   tintColor: focused ? colors.border : colors.white,
                 }}
               />
@@ -103,6 +142,14 @@ function Tabs() {
 const styles = StyleSheet.create({
   iconview: {
     alignItem: 'center',
+  },
+  imgSize: {
+    height: heightScale(24),
+    width: heightScale(24),
+  },
+  fullSize: {
+    width: '100%',
+    height: '100%',
   },
 });
 

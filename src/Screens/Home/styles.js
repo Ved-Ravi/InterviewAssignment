@@ -15,25 +15,38 @@ const styles = StyleSheet.create({
     margin: widthScale(24),
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   greet: {
     fontSize: heightScale(12),
     fontFamily: Fonts.UbuntuLight,
-    marginBottom: heightScale(5)
+    marginBottom: heightScale(5),
   },
   nameTxt: {
     fontFamily: Fonts.UbuntuMedium,
-    fontSize: heightScale(14)
+    fontSize: heightScale(14),
   },
   notfIcon: {
     height: 24,
-    width: 24
+    width: 24,
   },
   menuview: {
     marginHorizontal: widthScale(24),
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
+  graphcard: {
+    height: 200,
+    marginHorizontal: widthScale(24),
+    borderRadius: 10,
+    backgroundColor: colors.card,
+    elevation: 5,
+  },
+  grhead: {
+    fontFamily: Fonts.UbuntuRegular,
+    color: '#000000',
+    marginTop: heightScale(20),
+    marginLeft: widthScale(14),
+  },
 });
 
 export default styles;
