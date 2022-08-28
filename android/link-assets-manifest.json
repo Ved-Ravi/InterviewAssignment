@@ -1,0 +1,121 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/Images/backgroundImg.png",
+      "sha1": "afca0ab220ea8fb79e37eab3be239588d48f6e20"
+    },
+    {
+      "path": "src/assets/Images/homeBackground.png",
+      "sha1": "d8186239411b34197a9322e0367d9c2a6384f968"
+    },
+    {
+      "path": "src/assets/Fonts/Nunito-Regular.ttf",
+      "sha1": "4b7236ba666cb77f00d8cb2a17696cc0dc2b2cc9"
+    },
+    {
+      "path": "src/assets/Fonts/Poppins-Medium.ttf",
+      "sha1": "283f21b44efbdbf276ba802be2d949a36bbc4233"
+    },
+    {
+      "path": "src/assets/Fonts/Poppins-Regular.ttf",
+      "sha1": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00"
+    },
+    {
+      "path": "src/assets/Fonts/Poppins-SemiBold.ttf",
+      "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
+    },
+    {
+      "path": "src/assets/Fonts/Ubuntu-Bold.ttf",
+      "sha1": "020aaec9cdeb59aa8ebd2e4c693527cddb2d1577"
+    },
+    {
+      "path": "src/assets/Fonts/Ubuntu-Light.ttf",
+      "sha1": "d060b0ff74b379dcc3d10ac2d024602af419d9f0"
+    },
+    {
+      "path": "src/assets/Fonts/Ubuntu-Medium.ttf",
+      "sha1": "da662f767e6261491e20da197bd7ffbb7a7d122c"
+    },
+    {
+      "path": "src/assets/Fonts/Ubuntu-Regular.ttf",
+      "sha1": "8238e55f0320c3abc74057c988367c2f25fa3727"
+    },
+    {
+      "path": "src/assets/Icons/account.png",
+      "sha1": "3b9cb9dd2fc689e095f03d2b452fa0352c29790b"
+    },
+    {
+      "path": "src/assets/Icons/addIcon.png",
+      "sha1": "10360c857e8f613fa433d2254397421889da3920"
+    },
+    {
+      "path": "src/assets/Icons/autodebt.png",
+      "sha1": "0f00849e64cbe516494e55d70eafddc493eb063e"
+    },
+    {
+      "path": "src/assets/Icons/card.png",
+      "sha1": "e670433a5447469220ec0113d0244d6ed491846e"
+    },
+    {
+      "path": "src/assets/Icons/Chip.png",
+      "sha1": "0207dbbd2127fc3dc002ea801b43658122d3b081"
+    },
+    {
+      "path": "src/assets/Icons/Dropbox.png",
+      "sha1": "11b4f0c123be9e212a0916b23bdc908c2951bc03"
+    },
+    {
+      "path": "src/assets/Icons/ecommerce.png",
+      "sha1": "4c88bd812f577f0d2917a03664a1495894b5cb89"
+    },
+    {
+      "path": "src/assets/Icons/financing.png",
+      "sha1": "e924edce783fc447b19491885c5a8e43d1720741"
+    },
+    {
+      "path": "src/assets/Icons/home.png",
+      "sha1": "51bfed97ec65e22bae0abc7499c1b450979f0665"
+    },
+    {
+      "path": "src/assets/Icons/Mastercard.png",
+      "sha1": "ca116cfab495e14dedb38dd7df88051725542dac"
+    },
+    {
+      "path": "src/assets/Icons/message.png",
+      "sha1": "9f33277e64f494651eb8bc87de3e3b0bf5de3e69"
+    },
+    {
+      "path": "src/assets/Icons/moneychanger.png",
+      "sha1": "2d814a0f215337fc883ac5f006db2a66c7cad2b0"
+    },
+    {
+      "path": "src/assets/Icons/more.png",
+      "sha1": "d1c20dd08bc8cd05e282f83836d373f39571bf45"
+    },
+    {
+      "path": "src/assets/Icons/notification.png",
+      "sha1": "7d1a8fc17470a07c8af9ce2efd83f7a1a532960d"
+    },
+    {
+      "path": "src/assets/Icons/profileuser.png",
+      "sha1": "65f7d8e3eefb904ce325415299b2381ff706fbd5"
+    },
+    {
+      "path": "src/assets/Icons/qrscanner.png",
+      "sha1": "4f275e47ac814bdfdecfbd3d19724d6c74a4757c"
+    },
+    {
+      "path": "src/assets/Icons/share.png",
+      "sha1": "72d3705ace51f6ffa96fdc171a51c1afc46f334c"
+    },
+    {
+      "path": "src/assets/Icons/topup.png",
+      "sha1": "cbd3547415a21b4ee20af46f46c5313648f531f7"
+    },
+    {
+      "path": "src/assets/Icons/transfer.png",
+      "sha1": "74cba87a5c059f2fd8aff7fec56b6ee2664d9c8e"
+    }
+  ]
+}
